@@ -32,4 +32,19 @@ public class Words{
     public int getSize(){
         return words.size();
     }
+
+    public String getReplaceCorrections(String misSpelledWord){
+        int len=misSpelledWord.length;
+        String[] arr=misSpelledWord.split(" ");
+        char first=arr[0];
+        char last=arr[arr.length-1];
+        ArrayList<String> arr1=new ArrayList<String>();
+        
+        for(String a:english){
+            arr1.add(a);
+        }
+
+        return null;
+
+    }
 }
