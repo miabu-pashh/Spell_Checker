@@ -32,14 +32,32 @@ public class Words{
     public int getSize(){
         return words.size();
     }
+    public String Correction(String value,String misSpelledWord){
+        if(value.equals(misSpelledWord)){
+            return value;
+        }
+
+
+    }
 
     public String getReplaceCorrections(String misSpelledWord){
         int len=misSpelledWord.length;
-        String[] arr=misSpelledWord.split(" ");
-        char first=arr[0];
-        char last=arr[arr.length-1];
+        // String[] arr=misSpelledWord.split(" ");
+        // char first=arr[0];
+        // char last=arr[arr.length-1];
         ArrayList<String> arr1=new ArrayList<String>();
-        
+
+        for (words.Entry<String, boolean> entry : words.entrySet()) {
+            String boolean = entry.Boolean();
+            String value=entry.getValue();
+            if(value.length==misSpelledWord.length){
+                String correctWord=Correction(value,misSpelledWord);
+            }
+
+            System.out.println("Key=" + key + ", Value=" + value);
+        }
+
+
         for(String a:english){
             arr1.add(a);
         }
